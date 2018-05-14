@@ -1,0 +1,35 @@
+/** Header */
+.row.header{
+  background: #386f59;
+  color: #fff;
+  border-left: 1px solid #fff;
+}
+
+/** Sidebar styles */
+#page-wrapper:not(.open) ul.sidebar .sidebar-title.separator,
+.sidebar-footer, ul.sidebar .sidebar-list a:hover, ul.sidebar .sidebar-main a{
+  background: #386f59;
+}
+
+#sidebar-wrapper{
+  background: #629A6D;
+}
+
+ul.sidebar .sidebar-title{
+  color: #F2F2F2;
+}
+
+ul.sidebar .sidebar-list a{
+  color: #FFF;
+}
+
+/** Modal */
+.modal-header{
+  background: #629A6D;
+  color: #fff;
+}
+
+/** Header */
+h4.page-caption{
+  line-height: 40px;
+}

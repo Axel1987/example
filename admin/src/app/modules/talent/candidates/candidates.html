@@ -1,0 +1,45 @@
+<div class="row">
+
+    <div class="col-sm-12">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th>#</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Resume</th>
+            </tr>
+            </thead>
+
+            <tbody>
+            <tr ng-repeat="candidate in candidates track by $index">
+                <td>{{ candidate.id }}</td>
+                <td>{{ candidate.name }}</td>
+                <td>{{ candidate.email }}</td>
+                <td>{{ candidate.phone }}</td>
+                <td>
+                    <a href="{{ candidate.resume }}" ng-show="candidate.resume" target="_blank">Resume</a>
+                    <span class="text-danger" ng-show="!candidate.resume">Don't exist the resume</span>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="col-sm-12" ng-show="lastPage > 1">
+
+        <ul uib-pagination
+            boundary-links="true"
+            total-items="totalItems"
+            ng-model="currentPage"
+            class="pagination-sm"
+            previous-text="&lsaquo;"
+            next-text="&rsaquo;"
+            first-text="&laquo;"
+            last-text="&raquo;"
+            ng-change="pageChanged()">
+        </ul>
+
+    </div>
+</div>

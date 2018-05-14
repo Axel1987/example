@@ -1,0 +1,49 @@
+<div class="modal-content job-details">
+    <div class="modal-header">
+        <h3 class="modal-title" id="modal-title">JOB ID #{{ job.id }} ({{ job.active ? "Active" : "Don't active"
+            }})</h3>
+    </div>
+    <div class="modal-body" id="modal-body">
+
+        <div class="info">
+            <h5>Customer name:</h5>
+            <div>{{ job.client.name }}</div>
+        </div>
+
+        <div class="info">
+            <h5>Customer company:</h5>
+            <div>{{ job.client.company }}</div>
+        </div>
+
+        <div class="info">
+            <h5>Customer email:</h5>
+            <div>{{ job.client.email }}</div>
+        </div>
+
+        <div class="info">
+            <h5>Customer phone:</h5>
+            <div>{{ job.client.phone }}</div>
+        </div>
+
+        <div class="info">
+            <h5>Job assigned to:</h5>
+            <div uib-rating ng-model="job.partner.rating.rating" max="5" read-only="true"
+                 aria-labelledby="default-rating" ng-if="job.partner.name"></div>
+            <span class="text-success info" ng-if="job.partner.name">{{ job.partner.name }}</span>
+            <span class="text-danger info" ng-if="!job.partner.name">Work is not assigned to anyone</span>
+        </div>
+
+        <div class="info">
+            <h5>Status of the job:</h5>
+            <span class="text-success info" ng-if="job.completed">Completed</span>
+            <span class="text-danger info" ng-if="!job.completed">In the work</span>
+        </div>
+
+        <div class="info">
+            <h5>Job description:</h5>
+            <p>
+                {{ job.description }}
+            </p>
+        </div>
+    </div>
+</div>

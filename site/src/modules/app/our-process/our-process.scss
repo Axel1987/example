@@ -1,0 +1,15 @@
+.timeline{
+  display: flex;
+  align-items: center;
+  flex:1;
+  height: calc(100vh - 176px);
+  .timeline-image{
+    flex:1;
+  }
+}
+@media (min-width: 320px) and (max-width: 768px) {
+  .timeline{
+    padding:5vh 0;
+    height: initial;
+  }
+}

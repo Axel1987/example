@@ -1,0 +1,295 @@
+@import './variables';
+@font-face {
+  font-family: HelveticaNeue;
+  src: url('../assets/fonts/HelveticaNeue.ttf');
+}
+@font-face {
+  font-family: HelveticaNeueBold;
+  src: url('../assets/fonts/HelveticaNeueBold.ttf');
+}
+@font-face {
+  font-family: HelveticaNeueLight;
+  src: url('../assets/fonts/HelveticaNeueLight.ttf');
+}
+
+@font-face {
+  font-family: Playball;
+  src: url('../assets/fonts/Playball.ttf');
+}
+
+*{
+  outline: none;
+  font-family: HelveticaNeue, sans-serif;
+  font-size: 14px;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+ul{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+html,
+body{
+  margin: 0;
+  padding: 0;
+}
+
+.root,
+.layout-root,
+.app-root{
+  min-height: 100vh;
+}
+
+.root,
+.app-root,
+.app-layout{
+  display: flex;
+  flex-direction: column;
+  flex:1;
+}
+.layout-root{
+  background-color: white;
+  position: relative;
+}
+.btn-base-green{
+  display: inline-flex;
+  cursor: pointer;
+  border: none;
+  color: white;
+  background-color: $baseGreen;
+  font-weight: normal;
+  letter-spacing: 1px;
+  padding: 6px 12px;
+  justify-content: center;
+  align-items: center;
+  &.transparent{
+    background-color: transparent;
+    color: $baseGreen;
+    border: 2px solid $baseGreen;
+  }
+}
+
+.base-green-text{
+  color: $baseGreen;
+}
+.img-responsive{
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.text-inherit{
+  font: inherit;
+  display: inline-block;
+}
+.underlined{
+  font: inherit;
+  display: inline-block;
+  padding-bottom: 5px;
+  border-bottom: 3px solid $baseGreen;
+}
+.base-head-text{
+  margin: 0;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 4em;
+  font-family: HelveticaNeueLight, sans-serif;
+  &.white{
+    color: white;
+  }
+  &.green{
+    color:$baseGreen;
+  }
+}
+
+.base-text{
+  font-size: 1.1em;
+  font-family: HelveticaNeue, sans-serif;
+  &.white{
+    color: white;
+  }
+  &.green{
+    color: $baseGreen;
+  }
+}
+.block{
+  display: block;
+}
+
+.form-head-text{
+  font-size: 1.5em;
+  &.green{
+    color: $baseGreen;
+  }
+}
+
+.form-field{
+  width: 100%;
+  position: relative;
+  margin-bottom: 10px;
+  &.center-content{
+    text-align: center;
+  }
+  .form-label{
+    font-weight: 600;
+    display: block;
+    color: $baseGreen;
+    .text-error{
+      color: indianred;
+    }
+  }
+  .form-static-text{
+    margin: 0;
+  }
+  .form-textarea{
+    width: 100%;
+    resize: none;
+    padding: 5px 15px 15px 5px;
+    border: 1px solid #CDCDCD;
+    &::-webkit-input-placeholder{
+      color: #CDCDCD;
+      font-size: 12px;
+    }
+    &::-moz-placeholder{
+      color: #CDCDCD;
+      font-size: 12px;
+    }
+  }
+  .form-field-input{
+    border: none;
+    border-bottom: 2px solid $baseGreen;
+    padding: 5px 0;
+    width: 100%;
+    font-size: 1.1em;
+    font-weight: 600;
+  }
+  .addon-icon{
+    position: absolute;
+    bottom:10px;
+    right: 10px;
+  }
+  .form-button{
+    text-transform: uppercase;
+    padding-right: 26px;
+    padding-left: 26px;
+  }
+  .form-field-file-upload{
+    margin-top: 20px;
+    border-radius: 15px;
+    border: 2px dashed $baseGreen;
+    padding: 30px 0;
+    text-align: center;
+    cursor: pointer;
+    .icon-upload{
+      display: inline-flex;
+      flex-direction: column;
+      align-items: center;
+      .icon-upload-image{
+        width: 40px;
+        height: 30px;
+      }
+      .icon-upload-text{
+        color: $baseGreen;
+      }
+      .icon-not-empty,
+      .text-not-empty{
+        display: none;
+      }
+    }
+    &.ng-not-empty{
+      .icon-upload{
+        .icon-upload-text{
+          display: none;
+        }
+        .icon-not-empty,
+        .text-not-empty{
+          display: block;
+        }
+        .icon-empty,
+        .text-empty{
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+
+.video-background{
+  height: 35vh;
+  overflow: hidden;
+  position: relative;
+  .video-source{
+    position: absolute;
+    left:0;
+    top:0;
+    width: 100%;
+    object-fit: cover;
+  }
+}
+.video-background-head{
+  padding-top: 15vh;
+  text-align: center;
+}
+
+
+.page-hire,
+.page-our-process,
+.page-cv,
+.page-partners,
+.page-create-account{
+  .navigation-item{
+    .text-content{
+      color:white;
+    }
+  }
+}
+.visible-mobile{
+  display: none;
+}
+.visible-desktop{
+  display: flex;
+}
+
+@media (min-width: 1280px) and (max-width: 1440px) {
+  .base-head-text{
+    font-size: 3em;
+  }
+}
+
+@media (min-width: 1900px){
+  .container{
+    max-width: 1360px;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 768px) {
+  .page-hire,
+  .page-our-process,
+  .page-cv{
+    .navigation-item{
+      .text-content{
+        color:black;
+      }
+    }
+  }
+  .app-layout{
+    padding-top: $mobileHeaderHeight;
+  }
+  .visible-mobile{
+    display: flex;
+  }
+  .visible-desktop{
+    display: none;
+  }
+
+  .video-background-head{
+    padding-top: 10vh;
+    .base-head-text{
+      font-size: 2.5em;
+    }
+    .base-text{
+      font-size: .9em;
+    }
+  }
+}

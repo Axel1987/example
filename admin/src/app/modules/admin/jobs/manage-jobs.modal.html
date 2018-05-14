@@ -1,0 +1,73 @@
+<div class="modal-content">
+    <div class="modal-header">
+        <h3 class="modal-title" id="modal-title">{{ job.id ? 'Edit job' : 'Add job' }}</h3>
+    </div>
+    <div class="modal-body" id="modal-body">
+
+        <div class="form-group">
+            <label for="client">Client:</label>
+            <select id="client" class="form-control" ng-model="job.client_id"
+                    ng-options="client.id as client.name for client in clients"
+                    ng-change="setClientData()">
+            </select>
+            <span class="text-danger" ng-show="errorMessage.client_id[0]">{{ errorMessage.client_id[0] }}</span>
+        </div>
+
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input id="name" class="form-control" type="text" placeholder="Name" ng-model="job.client.name" readonly>
+            <span class="text-danger" ng-show="errorMessage.name[0]">{{ errorMessage.name[0] }}</span>
+        </div>
+
+        <div class="form-group">
+            <label for="company">Company</label>
+            <input id="company" class="form-control" type="text" placeholder="Company name" ng-model="job.client.company" readonly>
+            <span class="text-danger" ng-show="errorMessage.company[0]">{{ errorMessage.company[0] }}</span>
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input id="email" class="form-control" type="email" placeholder="Email" ng-model="job.client.email" readonly>
+            <span class="text-danger" ng-show="errorMessage.email[0]">{{ errorMessage.email[0] }}</span>
+        </div>
+
+        <div class="form-group">
+            <label for="phone">Phone</label>
+            <input id="phone" class="form-control" type="tel" placeholder="Phone" ng-model="job.client.phone" readonly>
+            <span class="text-danger" ng-show="errorMessage.phone[0]">{{ errorMessage.phone[0] }}</span>
+        </div>
+
+        <div class="form-group">
+            <label for="assigned">Assign the job to:</label>
+            <select id="assigned" class="form-control" ng-model="job.assigned"
+                    ng-options="user.id as user.name for user in talents">
+            </select>
+            <span class="text-danger" ng-show="errorMessage.assigned[0]">{{ errorMessage.assigned[0] }}</span>
+        </div>
+
+        <div class="form-group">
+            <label for="description">Description</label>
+            <textarea class="form-control" id="description" ng-model="job.description"></textarea>
+            <span class="text-danger" ng-show="errorMessage.description[0]">{{ errorMessage.description[0] }}</span>
+        </div>
+
+        <div class="form-group">
+            <label for="active">Active</label>
+            <input type="checkbox" class="form-check-input" id="active" ng-model="job.active" ng-checked="job.active"
+                   ng-true-value="1" ng-false-value="0">
+            <span class="text-danger" ng-show="errorMessage.active[0]">{{ errorMessage.active[0] }}</span>
+        </div>
+
+        <div class="form-group">
+            <label for="completed">Completed</label>
+            <input type="checkbox" class="form-check-input" id="completed" ng-model="job.completed" ng-checked="job.completed"
+                   ng-true-value="1" ng-false-value="0">
+            <span class="text-danger" ng-show="errorMessage.completed[0]">{{ errorMessage.completed[0] }}</span>
+        </div>
+
+    </div>
+    <div class="modal-footer">
+        <button class="btn btn-primary" type="button" ng-click="submit()">OK</button>
+        <button class="btn btn-warning" type="button" ng-click="cancel()">Cancel</button>
+    </div>
+</div>

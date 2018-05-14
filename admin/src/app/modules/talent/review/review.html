@@ -1,0 +1,56 @@
+<div class="row">
+
+    <div class="col-sm-12">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th>#</th>
+                <th>Customer</th>
+                <th>Partner</th>
+                <th>Appraisal</th>
+                <th>Job id</th>
+                <th>Review</th>
+            </tr>
+            </thead>
+
+            <tbody>
+            <tr ng-repeat="review in reviews track by $index">
+                <td>{{ review.id }}</td>
+                <td>
+                    <span class="info-link" ng-click="userInfo(review.client)">{{ review.client.name }}</span>
+                </td>
+                <td>
+                    <div uib-rating ng-model="review.partner.rating.rating" max="5" read-only="true" aria-labelledby="default-rating"></div>
+                    <span class="info-link" ng-click="userInfo(review.partner)">{{ review.partner.name }}</span>
+                </td>
+                <td>
+                    <div uib-rating ng-model="review.rating" max="5" read-only="true" aria-labelledby="default-rating"></div>
+                </td>
+                <td>
+                    <span class="info-link" ng-click="jobInfo(review.job, review.partner, review.client)"># {{ review.job.id }}</span>
+                </td>
+                <td>
+                    <span class="info-link" ng-click="reviewInfo(review)">View</span>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="col-sm-12" ng-show="lastPage > 1">
+
+        <ul uib-pagination
+            boundary-links="true"
+            total-items="totalItems"
+            ng-model="currentPage"
+            class="pagination-sm"
+            previous-text="&lsaquo;"
+            next-text="&rsaquo;"
+            first-text="&laquo;"
+            last-text="&raquo;"
+            ng-change="pageChanged()">
+        </ul>
+
+    </div>
+
+</div>

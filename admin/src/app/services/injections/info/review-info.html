@@ -1,0 +1,36 @@
+<div class="modal-content job-details">
+    <div class="modal-header">
+        <h3 class="modal-title" id="modal-title">Review #{{ infoObj.id }}</h3>
+    </div>
+    <div class="modal-body" id="modal-body">
+
+        <div class="info">
+            <h5>Customer name:</h5>
+            <div>{{ infoObj.client.name }}</div>
+        </div>
+
+        <div class="info">
+            <h5>Customer company:</h5>
+            <div>{{ infoObj.client.company }}</div>
+        </div>
+
+        <div class="info">
+            <h5>Partner name:</h5>
+            <div>
+                <div uib-rating ng-model="infoObj.partner.rating.rating" max="5" read-only="true" aria-labelledby="default-rating"></div>
+                {{ infoObj.partner.name }}
+            </div>
+        </div>
+
+        <div class="info">
+            <h5>Appraisal:</h5>
+            <div uib-rating ng-model="infoObj.rating" max="5" read-only="true" aria-labelledby="default-rating"></div>
+        </div>
+
+        <div class="info">
+            <h5>Review text:</h5>
+            {{ infoObj.text }}
+        </div>
+
+    </div>
+</div>

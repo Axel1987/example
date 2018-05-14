@@ -1,0 +1,19 @@
+<div class="sign-in">
+    <div class="form">
+        <form class="login-form">
+            <h2>Sign In to the Talent Admin-panel</h2>
+
+            <div class="form-group">
+                <input class="form-control" type="email" ng-model="loginModel.email" placeholder="E-mail"/>
+            </div>
+
+            <div class="form-group">
+                <input class="form-control"  type="password" ng-model="loginModel.password" placeholder="Password"/>
+            </div>
+
+            <span ng-show="errorMessage" class="text-danger">{{ errorMessage }}</span>
+
+            <button ng-click="signIn()">Sign In</button>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,67 @@
+<div class="row">
+
+    <div class="col-sm-12">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th>#</th>
+                <th>Name</th>
+                <th>Company</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Description</th>
+                <th>Paid</th>
+                <th>Assigned</th>
+                <th>Active</th>
+                <th>Completed</th>
+                <th>Actions</th>
+            </tr>
+            </thead>
+
+            <tbody>
+            <tr ng-repeat="job in jobs track by $index">
+                <td>{{ job.client.id }}</td>
+                <td>{{ job.client.name }}</td>
+                <td>{{ job.client.company }}</td>
+                <td>{{ job.client.email }}</td>
+                <td>{{ job.client.phone }}</td>
+                <td>
+                    <span class="info-link" ng-click="showDescription(job)">View</span>
+                </td>
+                <td> Coming soon </td>
+                <td>
+                    <div uib-rating ng-model="job.partner.rating.rating" max="5" read-only="true" aria-labelledby="default-rating"></div>
+                    <span class="info-link" ng-click="userInfo(job.partner)">{{ job.partner.name }}</span>
+                </td>
+                <td>
+                    <i class="fa fa-check-square-o" aria-hidden="true" ng-if="job.active"></i>
+                    <i class="fa fa-square-o" aria-hidden="true" ng-if="!job.active"></i>
+                </td>
+                <td>
+                    <i class="fa fa-check-square-o" aria-hidden="true" ng-if="job.completed"></i>
+                    <i class="fa fa-square-o" aria-hidden="true" ng-if="!job.completed"></i>
+                </td>
+                <td>
+                    <!--<button class="btn btn-default" ng-click="editJob($index)">Edit</button>-->
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="col-sm-12" ng-show="lastPage > 1">
+
+        <ul uib-pagination
+            boundary-links="true"
+            total-items="totalItems"
+            ng-model="currentPage"
+            class="pagination-sm"
+            previous-text="&lsaquo;"
+            next-text="&rsaquo;"
+            first-text="&laquo;"
+            last-text="&raquo;"
+            ng-change="pageChanged()">
+        </ul>
+
+    </div>
+</div>

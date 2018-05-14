@@ -1,0 +1,199 @@
+@import "../../../scss/variables";
+.home-carousel{
+  height: 100vh;
+  .slide{
+    position: relative;
+  }
+  .slide-item{
+    object-fit: cover;
+  }
+}
+.industry-promotion{
+  background: url('../../../assets/img/industry-promotion-bg.png') left top no-repeat;
+  background-size: cover;
+  margin-top: -100px;
+  padding-top: 200px;
+  position: relative;
+  z-index: 1;
+  &:after{
+    content:'';
+    float: left;
+    padding-top: 40%;
+  }
+  .promotion-image{
+    padding: 0 0 0 65px;
+  }
+  .promotion-info{
+    padding: 0 65px 0 65px;
+  }
+  .promotion-info-text{
+    margin-bottom: 10px;
+  }
+}
+
+.hire-promotion{
+  position: absolute;
+  left: 0;
+  top: 300px;
+  right: 0;
+  .hire-promotion-image{
+    height: 50px;
+    width: auto;
+    display: block;
+  }
+  .hire-promotion-head{
+    font-size: 4em;
+    text-transform: uppercase;
+    margin: 5px 0 0 0;
+    font-family: HelveticaNeueLight,  sans-serif;
+    font-weight: 100;
+  }
+  .hire-promotion-text{
+    margin-bottom: 10px;
+  }
+}
+
+.business-promotion{
+  padding-top: 100px;
+  .promotion-image{
+    padding: 0 65px 0 0;
+  }
+  .promotion-info{
+    padding: 0 65px 0 65px;
+  }
+  .promotion-info-text{
+    margin-bottom: 10px;
+  }
+}
+
+.promotion-info-head{
+  font-family: HelveticaNeueLight, sans-serif;
+  font-size: 4em;
+  font-weight: 100;
+  margin: 60px 0 20px 0;
+  letter-spacing: 4px;
+}
+
+.part-of-us{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url('../../../assets/img/part-of-us-bg.jpg') left top no-repeat;
+  background-size: cover;
+  &:after{
+    content: '';
+    float: left;
+    padding-top: 66.6%;
+  }
+}
+
+.part-of-us-promotion{
+  border: 3px solid white;
+  width: 22%;
+  display: flex;
+  &:after{
+    content: '';
+    float: left;
+    padding-top: 100%;
+  }
+  .promotion-info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding:85px 40px;
+  }
+  .promotion-info-head{
+    font-family: Playball, sans-serif;
+    color: white;
+    margin: 0;
+  }
+  .promotion-info-text{
+    color: white;
+    text-align: center;
+    margin-bottom: 0;
+  }
+  .brand-logo{
+    width: 105px;
+    height: 55px;
+  }
+}
+
+@media (min-width: 1200px) and (max-width: 1440px) {
+  .hire-promotion{
+    top:initial;
+    bottom: 15vh;
+    .hire-promotion-head{
+      font-size: 3em;
+    }
+  }
+  .promotion-info-head{
+    font-size: 3em;
+  }
+  .industry-promotion{
+    &:after{
+      padding-top: 37%;
+    }
+  }
+  .part-of-us-promotion{
+    width: 25%;
+    .promotion-info{
+      padding:20px;
+    }
+  }
+}
+
+
+@media (min-width: 320px) and (max-width: 768px) {
+  .home-carousel{
+    height: calc(100vh - 52px);
+  }
+  .hire-promotion{
+    top:initial;
+    bottom: 20px;
+    .hire-promotion-head{
+      font-size: 3em;
+    }
+  }
+  .industry-promotion,
+  .business-promotion{
+    margin-top:0;
+    padding-top: 0;
+    padding-bottom: 0;
+    .promotion-image,
+    .promotion-info{
+      padding: 0;
+    }
+    .promotion-info-head{
+      margin: 25px 0;
+      font-size: 2em;
+    }
+  }
+  .industry-promotion{
+    flex-direction: column-reverse;
+    background: white;
+    &:after{
+      display: none;
+    }
+  }
+  .promotion-info-text{
+    font-size: .9em;
+    margin: 10px 0;
+  }
+  .part-of-us{
+    background-size: 200%;
+    background-position: 50% 0;
+    &:after{
+      padding-top: 122%;
+    }
+    .part-of-us-promotion{
+      width: 70%;
+      .promotion-info-head{
+        font-size: 2em;
+      }
+      .promotion-info{
+        padding: 10px;
+      }
+    }
+  }
+}

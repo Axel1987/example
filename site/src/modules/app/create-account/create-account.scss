@@ -1,0 +1,10 @@
+.create-account-from-container{
+  padding-top: 2vh;
+  padding-bottom: 2vh;
+}
+
+@media (min-width: 1500px) {
+  .create-account-from-container{
+    max-width: 1000px;
+  }
+}

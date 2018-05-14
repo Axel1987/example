@@ -1,0 +1,116 @@
+<div id="page-wrapper" ng-class="{'open': toggle}">
+	<div id="sidebar-wrapper">
+		<ul class="sidebar">
+			<li class="sidebar-main">
+				<a ng-click="toggleSidebar()">
+					Talent Savant
+					<span class="menu-icon glyphicon glyphicon-transfer"></span>
+				</a>
+			</li>
+
+			<li class="sidebar-title"><span>NAVIGATION</span></li>
+
+			<li class="sidebar-list">
+				<a ui-sref="router.talent-layout.dashboard" ui-sref-active="">
+					Dashboard
+					<span class="menu-icon fa fa-tachometer"></span>
+				</a>
+			</li>
+
+			<li class="sidebar-list">
+				<a ui-sref="router.talent-layout.jobs" ui-sref-active="">
+					Jobs
+					<span class="menu-icon fa fa-briefcase"></span>
+				</a>
+			</li>
+
+			<li class="sidebar-list">
+				<a ui-sref="router.talent-layout.reviews" ui-sref-active="">
+					Reviews
+					<span class="menu-icon fa fa-user-plus"></span>
+				</a>
+			</li>
+
+			<li class="sidebar-list">
+				<a ui-sref="router.talent-layout.candidates" ui-sref-active="">
+					Candidates
+					<span class="menu-icon fa fa-user-circle-o"></span>
+				</a>
+			</li>
+
+			<li class="sidebar-list">
+				<a ui-sref="router.talent-layout.partner-candidates" ui-sref-active="">
+					Сandidates (partners)
+					<span class="menu-icon fa fa-user-plus"></span>
+				</a>
+			</li>
+		</ul>
+	</div>
+	<!-- End Sidebar -->
+	<div id="content-wrapper">
+		<div class="page-content">
+
+			<!-- Header Bar -->
+			<div class="row header">
+				<div class="col-xs-12">
+					<div class="user pull-right">
+						<div class="item dropdown" uib-dropdown>
+							<a href="#" class="dropdown-toggle" uib-dropdown-toggle>
+								<img ng-if="user.avatar" src="{{ user.avatar }}">
+								<img ng-if="!user.avatar" src="../../../../img/avatar.jpg">
+							</a>
+							<ul class="dropdown-menu dropdown-menu-right">
+								<li class="dropdown-header">
+									{{ user.name }}
+								</li>
+								<li class="divider"></li>
+								<li class="link">
+									<a ui-sref="router.talent-layout.profile">
+										Profile
+									</a>
+								</li>
+								<li class="divider"></li>
+								<li class="link">
+									<a ui-sref='router.sign-in' ng-click="logout()">
+										Logout
+									</a>
+								</li>
+							</ul>
+						</div>
+						<div class="item dropdown" uib-dropdown>
+							<a href="#" class="dropdown-toggle" uib-dropdown-toggle>
+								<i class="fa fa-bell-o"></i>
+							</a>
+							<ul class="dropdown-menu dropdown-menu-right">
+								<li class="dropdown-header">
+									Notifications
+								</li>
+								<li class="divider"></li>
+								<!--<li>-->
+									<!--<a href="#">Server Down!</a>-->
+								<!--</li>-->
+							</ul>
+						</div>
+					</div>
+					<div class="meta">
+						<!--<div class="page">-->
+							<!--Dashboard-->
+						<!--</div>-->
+						<!--<div class="breadcrumb-links">-->
+							<!--Home / Dashboard-->
+						<!--</div>-->
+						<h4 class="page-caption">
+							<i class="{{ headerClass }}" aria-hidden="true"></i>
+							{{ headerText }}
+						</h4>
+					</div>
+				</div>
+			</div>
+			<!-- End Header Bar -->
+
+			<div ui-view></div>
+
+		</div><!-- End Page Content -->
+	</div><!-- End Content Wrapper -->
+
+</div>

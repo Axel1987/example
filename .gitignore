@@ -1,0 +1,16 @@
+/.idea
+/site/designs/
+/site/node_modules/
+/site/cordova/platforms/
+/site/cordova/plugins/
+/site/cordova/www/*
+!/site/cordova/www
+!/site/cordova/config.xml
+!/site/cordova/package.json
+/admin/src/app/services/config.js
+/site/dist/bundle.min.css
+/site/dist/bundle.min.js
+/site/dist/vendors.min.css
+/site/dist/vendors.min.js
+/site/dist/assets/fonts/
+/site/dist/assets/img/

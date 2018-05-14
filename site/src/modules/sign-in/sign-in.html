@@ -1,0 +1,40 @@
+<form class="sign-in-form" name="signInForm" ng-submit="signIn(userCred)">
+    <div class="sign-in-form-content">
+        <svg  class="brand-logo" ng-bind-html="logo" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	                            width="177px" height="92.913px" viewBox="0 0 177 92.913" enable-background="new 0 0 177 92.913" xml:space="preserve">
+    </svg>
+        <div class="form-field">
+            <label class="form-label" for="email">
+                <span ng-hide="signInForm['email'].$error.backend">Email</span>
+                <span class="text-error" ng-show="signInForm['email'].$error.backend">
+                    {{signInForm['email'].$error.backend}}
+                </span>
+            </label>
+            <input type="email"
+                   name="email"
+                   id="email"
+                   ng-change="clearFieldError(signInForm['email'])"
+                   ng-model="userCred.email"
+                   class="form-field-input">
+        </div>
+        <div class="form-field">
+            <label class="form-label" for="password">
+                <span ng-hide="signInForm['password'].$error.backend">Password</span>
+                <span class="text-error" ng-show="signInForm['password'].$error.backend">
+                    {{signInForm['password'].$error.backend}}
+                </span>
+            </label>
+            <input type="password"
+                   name="password"
+                   id="password"
+                   ng-change="clearFieldError(signInForm['password'])"
+                   ng-model="userCred.password"
+                   class="form-field-input">
+        </div>
+        <div class="form-field sign-in-controls">
+            <button type="submit" class="btn-base-green btn-sign-in">Sign in</button>
+            <span class="base-text green">OR</span>
+            <a class="base-text green" ui-sref="app.create-account">Create account</a>
+        </div>
+    </div>
+</form>

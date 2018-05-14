@@ -1,0 +1,37 @@
+<div class="modal-content">
+    <div class="modal-header">
+        <h3 class="modal-title" id="modal-title">Edit Profile</h3>
+    </div>
+    <div class="modal-body" id="modal-body">
+
+        <div class="form-group">
+            <img ng-if="user.avatar" src="{{ user.avatar }}" class="avatar">
+            <img ng-if="!user.avatar" src="../../../../img/avatar.jpg" class="avatar">
+            <input type="file" ng-model="user.avatar_image" ngf-select name="avatar_image">
+            <span class="text-danger" ng-show="errorMessage.avatar_image[0]">{{ errorMessage.avatar_image[0] }}</span>
+        </div>
+
+        <div class="form-group">
+            <label for="name">User name</label>
+            <input id="name" class="form-control" type="text" placeholder="Name" ng-model="user.name">
+            <span class="text-danger" ng-show="errorMessage.name[0]">{{ errorMessage.name[0] }}</span>
+        </div>
+
+        <div class="form-group">
+            <label for="email">User email</label>
+            <input id="email" class="form-control" type="email" placeholder="Email" ng-model="user.email">
+            <span class="text-danger" ng-show="errorMessage.email[0]">{{ errorMessage.email[0] }}</span>
+        </div>
+
+        <div class="form-group">
+            <label for="phone">User phone</label>
+            <input id="phone" class="form-control" type="tel" placeholder="Phone" ng-model="user.phone">
+            <span class="text-danger" ng-show="errorMessage.phone[0]">{{ errorMessage.phone[0] }}</span>
+        </div>
+
+    </div>
+    <div class="modal-footer">
+        <button class="btn btn-primary" type="button" ng-click="editUser()">OK</button>
+        <button class="btn btn-warning" type="button" ng-click="cancel()">Cancel</button>
+    </div>
+</div>

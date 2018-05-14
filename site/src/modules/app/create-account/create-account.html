@@ -1,0 +1,130 @@
+<div class="video-background">
+    <video class="video-source" width="100%" height="100%" autoplay loop>
+        <source src="./assets/video/office.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+    </video>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 offset-lg-2 col-xs-12 video-background-head hire-human-head">
+                <h1 class="base-head-text white">Create an account</h1>
+                <p class="base-text white">
+                    Begin the process
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<form class="container create-account-from-container"
+      ng-submit="createAccount(userData)"
+      name="createAccountForm">
+    <div class="row">
+        <div class="col-lg-4">
+            <h3 class="form-head-text green">
+                Create an account
+            </h3>
+            <div class="form-field">
+                <label class="form-label" for="name">
+                    <span ng-hide="createAccountForm['name'].$error.backend">Name</span>
+                    <span class="text-error" ng-show="createAccountForm['name'].$error.backend">
+                        {{createAccountForm['name'].$error.backend}}
+                    </span>
+                </label>
+                <input type="text"
+                       name="name"
+                       id="name"
+                       ng-model="userData.name"
+                       ng-change="clearFieldError(createAccountForm['name'])"
+                       class="form-field-input">
+            </div>
+            <div class="form-field">
+                <label class="form-label" for="company">
+                    <span ng-hide="createAccountForm['company'].$error.backend">Company name</span>
+                    <span class="text-error" ng-show="createAccountForm['company'].$error.backend">
+                        {{createAccountForm['company'].$error.backend}}
+                    </span>
+                </label>
+                <input type="text"
+                       name="company"
+                       id="company"
+                       ng-model="userData.company"
+                       ng-change="clearFieldError(createAccountForm['company'])"
+                       class="form-field-input">
+            </div>
+            <div class="form-field">
+                <label class="form-label" for="email">
+                    <span ng-hide="createAccountForm['email'].$error.backend">Email</span>
+                    <span class="text-error" ng-show="createAccountForm['email'].$error.backend">
+                        {{createAccountForm['email'].$error.backend}}
+                    </span>
+                </label>
+                <input type="email"
+                       name="email"
+                       id="email"
+                       ng-model="userData.email"
+                       ng-change="clearFieldError(createAccountForm['email'])"
+                       class="form-field-input">
+            </div>
+            <div class="form-field">
+                <label class="form-label" for="phone">
+                    <span ng-hide="createAccountForm['phone'].$error.backend">Phone</span>
+                    <span class="text-error" ng-show="createAccountForm['phone'].$error.backend">
+                        {{createAccountForm['phone'].$error.backend}}
+                    </span>
+                </label>
+                <input type="text"
+                       name="phone"
+                       id="phone"
+                       ng-model="userData.phone"
+                       ng-change="clearFieldError(createAccountForm['phone'])"
+                       class="form-field-input">
+            </div>
+            <div class="form-field">
+                <label class="form-label" for="password">
+                    <span ng-hide="createAccountForm['password'].$error.backend">Password</span>
+                    <span class="text-error" ng-show="createAccountForm['password'].$error.backend">
+                        {{createAccountForm['password'].$error.backend}}
+                    </span>
+                </label>
+                <input type="password"
+                       name="password"
+                       id="password"
+                       ng-model="userData.password"
+                       ng-change="clearFieldError(createAccountForm['password'])"
+                       class="form-field-input">
+            </div>
+            <div class="form-field">
+                <label class="form-label" for="password_confirmation">
+                    <span ng-hide="createAccountForm['password_confirmation'].$error.backend">Password confirmation</span>
+                    <span class="text-error" ng-show="createAccountForm['password_confirmation'].$error.backend">
+                        {{createAccountForm['password_confirmation'].$error.backend}}
+                    </span>
+                </label>
+                <input type="password"
+                       name="password_confirmation"
+                       id="password_confirmation"
+                       ng-model="userData.password_confirmation"
+                       ng-change="clearFieldError(createAccountForm['password_confirmation'])"
+                       class="form-field-input">
+            </div>
+            <div class="form-field">
+                <button type="submit"
+                        class="form-button btn-base-green">
+                    Submit
+                </button>
+            </div>
+        </div>
+        <div class="col-lg-8">
+            <h3 class="form-head-text green">
+                Our commitments to clients
+            </h3>
+            <p class="form-base-text">
+                Hiring a Human has never been so
+                simple. Fill out the form below and
+                one of our skilled Talent Partners will
+                quickly reach out to you, guide you
+                through our one-of-a-kind process,
+                and partner with you to make a
+                sucessfull hire.
+            </p>
+        </div>
+    </div>
+</form>

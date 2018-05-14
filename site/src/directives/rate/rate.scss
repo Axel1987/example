@@ -1,0 +1,17 @@
+@import "../../scss/variables";
+.rate{
+  display: flex;
+  .rate-item{
+    margin-right: 1em;
+    .rate-star{
+      polygon{
+        fill: #7e7e7e;
+      }
+      &.active{
+        polygon{
+          fill: $baseGreen;
+        }
+      }
+    }
+  }
+}

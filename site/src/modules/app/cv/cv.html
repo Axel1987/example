@@ -1,0 +1,202 @@
+<div class="video-background">
+    <video class="video-source" width="100%" height="100%" autoplay loop>
+        <source src="./assets/video/office.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+    </video>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 offset-lg-2 col-xs-12 video-background-head ">
+                <h1 class="base-head-text white">{{::headText}}</h1>
+                <p class="base-text white">
+                    Talent Savant is the most transparent talent
+                    agency in the world. That means we will only
+                    reach out to you for an interview if we have a
+                    job that matches your skill sets, is in your
+                    geography, and is currently interviewing.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <h2 class="base-head-text commitments-head green">Our commitments</h2>
+        </div>
+    </div>
+    <div class="row commitment-row">
+        <div class="col-xl-6 col-lg-6 col-sm-12">
+            <h3 class="base-head-text green commitments-sub-head">We commit to: Transparency</h3>
+            <p class="base-text">
+                Humans are not commodities. Humans are humans. At Talent Savant, our core commitments extend to every
+                candidate we interact with
+            </p>
+            <ul class="commitments-list">
+                <li class="commitments-list-item base-text">
+                    We commit to telling you what opportunities we have open, with what companies, at what salary, in real
+                    time.
+                </li>
+            </ul>
+        </div>
+        <div class="col-xl-6 col-lg-6 col-sm-12">
+            <h3 class="base-head-text green commitments-sub-head">We Commit to: Integrity</h3>
+            <ul class="commitments-list">
+                <li class="commitments-list-item base-text">
+                    We commit to putting your needs as human first, above our own.
+                </li>
+                <li class="commitments-list-item base-text">
+                    We commit to never trying to pressure you into a job you are not right for or don’t want.
+                </li>
+                <li class="commitments-list-item base-text">
+                    We commit to never reaching out to you unless we have a specific role that might be a good fit.
+                </li>
+                <li class="commitments-list-item base-text">
+                    We commit to never, ever, ghosting you.
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="row commitment-row">
+        <div class="col-xl-6 col-lg-6 col-sm-12">
+            <h3 class="base-head-text green commitments-sub-head">We commit to: Partnership</h3>
+            <ul class="commitments-list">
+                <li class="commitments-list-item base-text">
+                    We commit to listening to and understanding your career goals and aspirations and creating a
+                    relationship with you built partnership and trust
+                </li>
+                <li class="commitments-list-item base-text">
+                    We commit to presenting you with the opportunities that most closely align with your goals.
+                </li>
+                <li class="commitments-list-item base-text">
+                    If you are the right candidate for the job, we will present you to the hiring manager in no more than 5
+                    business days from the initial interview.
+                </li>
+            </ul>
+        </div>
+        <div class="col-xl-6 col-lg-6 col-sm-12">
+            <h3 class="base-head-text green commitments-sub-head">We commit to: Speed</h3>
+            <ul class="commitments-list">
+                <li class="commitments-list-item base-text">
+                    If you are the right candidate for the job, we will present you to the hiring manager in no more than 5
+                    business days from the intial interview.
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="row commitment-row">
+        <div class="col">
+            <p class="base-text">
+                We do not engage in deceptive practices and will not interview you for a job that does not exist, and this is why:
+            </p>
+            <ul class="commitments-list">
+                <li class="commitments-list-item base-text">
+                    Recruiting agencies participate in sham interviews in order to sell human beings as commodities. If you have ever spoken to a
+                    recruiter, then had an "interview" the next day, you have participated in this process. The purpose of this sham interview is to
+                    make sure you are a sellable commodity (you are presentable, personable, etc).
+                </li>
+                <li class="commitments-list-item base-text">
+                    Once you participate in the sham interview, the recruiting agency will scrub your resume of any contact information and then
+                    proceed to "market" your skills to every company who might be interested in hiring someone like you. It sounds good until you
+                    realize three things:
+                    <ol class="numeric-list">
+                        <li>
+                            The company must be willing to pay an astronomical fee to the recruiting agency to hire you (industry standard is 2025%
+                            of your first years' salary).
+                        </li>
+                        <li>
+                            If a company cannot pay the fee, but likes your skill set, your recruiter is generally not allowed to disclose this to you
+                            per their company policies. They have one job: to turn your skill set into a fee.
+                        </li>
+                        <li>
+                            If a company is interested in both interviewing you and paying the astronomical fee associated with your hire, the
+                            recruiting agency will do everything they can to source and provide the company with other candidates like you or
+                            better than you. The company does not care if you get the job or if it's someone else. They want the fee and nobody
+                            wants to bet on one horse.
+                            If you have a very niche or in-demand
+                            skill set, the practice of marketing your resume can turn into a new job for
+                            you. If you are just a normal jobseeker
+                            needing assistance, contacting a recruiting agency is not your best option.
+                        </li>
+                    </ol>
+                </li>
+            </ul>
+            <p class="base-text">
+                You are a human, and Talent Savant is proudly ProHuman.
+            </p>
+            <p class="base-text">
+                <b>If you need a job right now: </b>instead of tricking you and selling you as a commodity, we are happy to give you some great
+                jobseeking advice to help you in your search.
+            </p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="offset-xl-4 col-xl-4 offset-lg-3 col-lg-6 col-sm-12 col-xs-12">
+            <form class="resume-form" name="cvForm" ng-submit="uploadCv(cvData)">
+                <div class="form-field">
+                    <label class="form-label" for="name">
+                        <span ng-hide="cvForm['name'].$error.backend">Name</span>
+                        <span class="text-error" ng-show="cvForm['name'].$error.backend">
+                            {{cvForm['name'].$error.backend}}
+                        </span>
+                    </label>
+                    <input type="text"
+                           name="name"
+                           id="name"
+                           ng-model="cvData.name"
+                           ng-change="clearFieldError(cvForm['name'])"
+                           class="form-field-input">
+                </div>
+                <div class="form-field">
+                    <label class="form-label" for="email">
+                        <span ng-hide="cvForm['email'].$error.backend">Email</span>
+                        <span class="text-error" ng-show="cvForm['email'].$error.backend">
+                            {{cvForm['email'].$error.backend}}
+                        </span>
+                    </label>
+                    <input type="email"
+                           name="email"
+                           id="email"
+                           ng-model="cvData.email"
+                           ng-change="clearFieldError(cvForm['email'])"
+                           class="form-field-input">
+                </div>
+                <div class="form-field">
+                    <label class="form-label" for="phone">
+                        <span ng-hide="cvForm['phone'].$error.backend">Phone</span>
+                        <span class="text-error" ng-show="cvForm['phone'].$error.backend">
+                            {{cvForm['phone'].$error.backend}}
+                        </span>
+                    </label>
+                    <input type="text"
+                           name="phone"
+                           id="phone"
+                           ng-model="cvData.phone"
+                           ng-change="clearFieldError(cvForm['phone'])"
+                           class="form-field-input">
+                </div>
+                <div class="form-field">
+                    <label class="form-label">
+                        <span ng-hide="cvForm['resume'].$error.backend">Resume</span>
+                        <span class="text-error" ng-show="cvForm['resume'].$error.backend">
+                            {{cvForm['resume'].$error.backend}}
+                        </span>
+                    </label>
+                    <div ngf-select ng-model="cvData.resume"
+                         name="file"
+                         ng-change="clearFieldError(cvForm['resume'])"
+                         class="form-field-file-upload">
+                        <div class="icon-upload">
+                            <img class="icon-upload-image icon-empty" src="../../../assets/img/icon-upload.svg">
+                            <img class="icon-upload-image icon-not-empty" src="../../../assets/img/icon-check.svg">
+                            <div class="icon-upload-text text-empty">Add file</div>
+                            <div class="icon-upload-text text-not-empty">Change file</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-field center-content">
+                    <button type="submit" class="form-button btn-base-green">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+

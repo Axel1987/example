@@ -1,0 +1,67 @@
+@import "../../../scss/variables";
+.about-us{
+  padding: 15vh 0 5vh 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .brand-logo{
+    width: 150px;
+    height: 79px;
+    margin-bottom: 5vh;
+  }
+}
+.executive-team-head{
+  font-size: 3em;
+  text-transform: none;
+  font-family: Playball, sans-serif;
+  text-align: center;
+  padding-bottom: 5vh;
+}
+
+.person-card{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 25px;
+  .person-image{
+    border-radius: 100%;
+    display: block;
+    width: 100%;
+    &:after{
+      content: '';
+      float: left;
+      padding-top: 100%;
+    }
+    &.person-one{
+      background: url('../../../assets/img/industry-promotion-image.png') center center no-repeat;
+      background-size: cover;
+    }
+  }
+  .person-name{
+    margin: 1em 0;
+    font-size: 1.5em;
+    color: $baseGreen;
+  }
+  .person-info{
+    margin: 0 0 1em 0;
+  }
+}
+
+.page-about-controls{
+  padding: 25px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .btn-base-green{
+    margin-bottom: 1em;
+  }
+}
+
+.row-team{
+  padding-bottom: 5vh;
+}
+@media (min-width: 320px) and (max-width: 768px) {
+  .about-us{
+    padding: 5vh 0;
+  }
+}

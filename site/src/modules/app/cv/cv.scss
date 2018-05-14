@@ -1,0 +1,42 @@
+.resume-form{
+  padding: 2vh 0;
+}
+.commitments-head{
+  font-size: 3em;
+  text-transform: none;
+  margin: 2em 0;
+}
+
+.commitments-sub-head{
+  font-size: 2em;
+  text-align: left;
+  text-transform: none;
+  margin-bottom: 1em;
+}
+.commitment-row{
+  padding-top: 1em;
+  padding-bottom: 2em;
+}
+
+.commitments-list{
+  .commitments-list-item{
+    background: url("../../../assets/img/logo.svg") left top no-repeat;
+    padding-left: 2em;
+    background-size: 1.2em;
+    margin-bottom: 1em;
+    .numeric-list{
+      margin-top: 1em;
+      padding-left: 1em;
+    }
+  }
+}
+
+@media (min-width: 320px) and (max-width: 768px) {
+  .commitments-head{
+    margin: 1em 0;
+    font-size: 2em;
+  }
+  .commitments-sub-head{
+    font-size: 1.5em;
+  }
+}

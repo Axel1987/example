@@ -1,0 +1,64 @@
+@import "../../../scss/variables";
+.row-partners{
+  padding-top: 1em;
+}
+.partner-card{
+  display: flex;
+  padding: 20px;
+  box-shadow: 0 0 1em 0 gray;
+  margin-bottom: 1em;
+  .partner-image-container{
+    display: flex;
+    flex-direction: column;
+    flex:1 0 20%;
+    .partner-image{
+      border-radius: 100%;
+      display: flex;
+      width: 100%;
+      &:after{
+        content: '';
+        float: left;
+        padding-top: 100%;
+      }
+      &.partner-one{
+        background: url('../../../assets/img/industry-promotion-image.png') center center no-repeat;
+        background-size: cover;
+      }
+    }
+  }
+  .partner-info{
+    display: flex;
+    flex-direction: column;
+    flex: 1 0 80%;
+    padding: 0 20px;
+  }
+  .partner-name{
+    margin: 0;
+    font-size: 1.8em;
+    color: $baseGreen;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 768px) {
+  .partner-card{
+    flex-direction: column;
+    padding:20px;
+    .partner-image-container{
+      align-items: center;
+      .partner-image{
+        width: 50%;
+      }
+    }
+    .partner-info{
+      padding: 20px 0 0 0;
+      align-items: center;
+    }
+    .partner-name,
+    .partner-brief{
+      text-align: center;
+    }
+    .partner-brief{
+      font-size: .9em;
+    }
+  }
+}

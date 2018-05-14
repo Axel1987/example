@@ -1,0 +1,41 @@
+@import "../../../scss/variables";
+.page-thank-you{
+  header{
+    position: relative;
+  }
+}
+
+.thank-you{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  .base-head-text{
+    text-transform: none;
+  }
+  .thank-you-message{
+    color: $baseGreen;
+    font-size: 1.5em;
+    text-align: center;
+  }
+  .icon-check{
+    margin:3vh 0 2vh 0;
+  }
+  .separator{
+    width: 25%;
+    margin: 2vh 0;
+    border-top: 1px solid #dadada;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 768px) {
+  .page-thank-you{
+    header{
+      position: fixed;
+    }
+  }
+  .thank-you{
+    padding: 5vh 0;
+  }
+}

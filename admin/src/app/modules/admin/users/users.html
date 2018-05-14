@@ -1,0 +1,51 @@
+<div class="row">
+
+    <div class="col-sm-12">
+        <button class="btn btn-default" ng-click="addUser()">Add user</button>
+    </div>
+
+    <div class="col-sm-12">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th>#</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Role</th>
+                <th>Actions</th>
+            </tr>
+            </thead>
+
+            <tbody>
+            <tr ng-repeat="user in users track by $index">
+                <td>{{ user.id }}</td>
+                <td>{{ user.name }}</td>
+                <td>{{ user.email }}</td>
+                <td>{{ user.phone }}</td>
+                <td>{{ user.user_role.role.display_name }}</td>
+                <td>
+                    <button class="btn btn-default" ng-click="editUser($index)">Edit</button>
+                    <button class="btn btn-default" ng-click="changePassword(user)">Change pass</button>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="col-sm-12" ng-show="lastPage > 1">
+
+        <ul uib-pagination
+            boundary-links="true"
+            total-items="totalItems"
+            ng-model="currentPage"
+            class="pagination-sm"
+            previous-text="&lsaquo;"
+            next-text="&rsaquo;"
+            first-text="&laquo;"
+            last-text="&raquo;"
+            ng-change="pageChanged()">
+        </ul>
+
+    </div>
+</div>

@@ -1,0 +1,70 @@
+<div class="app-root" ng-class="{'menu-active': menuActive}">
+    <header>
+        <div class="mobile-menu-toggle visible-mobile" ng-click="toggleMenu()"></div>
+        <div class="brand" ui-sref="app.home">
+            <svg  class="brand-logo" ng-bind-html="logo" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	            width="177px" height="92.913px" viewBox="0 0 177 92.913" enable-background="new 0 0 177 92.913" xml:space="preserve">
+            </svg>
+        </div>
+        <ul class="navigation">
+            <li class="navigation-item" ng-click="toggleMenu()" ui-sref="app.hire" ui-sref-active="active">
+                <img class="visible-mobile navigation-icon" src="../../assets/img/hire-human.svg">
+                <span class="text-content">Hire a human</span>
+            </li>
+            <li class="navigation-item" ng-click="toggleMenu()" ui-sref="app.about-us" ui-sref-active="active">
+                <img class="visible-mobile navigation-icon" src="../../assets/img/about-us.svg">
+                <span class="text-content">About us</span>
+            </li>
+            <li class="navigation-item" ng-click="toggleMenu()" ui-sref="app.our-process" ui-sref-active="active">
+                <img class="visible-mobile navigation-icon" src="../../assets/img/our-process.svg">
+                <span class="text-content">Our process</span>
+            </li>
+            <li class="navigation-item" ng-click="toggleMenu()" ui-sref="app.our-fees" ui-sref-active="active">
+                <img class="visible-mobile navigation-icon" src="../../assets/img/our-fees.svg">
+                <span class="text-content">Our fees</span>
+            </li>
+            <li class="navigation-item" ng-click="toggleMenu()" ui-sref="app.candidates" ui-sref-active="active">
+                <img class="visible-mobile navigation-icon" src="../../assets/img/candidates.svg">
+                <span class="text-content">Candidates</span>
+            </li>
+            <li class="navigation-item" ng-click="toggleMenu()" ui-sref="app.cv({cvOwner:'seeker'})" ui-sref-active="active">
+                <img class="visible-mobile navigation-icon" src="../../assets/img/candidates.svg">
+                <span class="text-content">Drop resume</span>
+            </li>
+            <li class="auth-controls" ng-class="{'signed':appUser.signed()}">
+                <div class="visible-mobile logged-user">{{appUser.user.name}}</div>
+                <div class="btn-base-green btn-my-profile" ng-click="toggleMenu(); appUser.signOut()">Sign out</div>
+                <!--<div class="btn-base-green btn-my-profile" ng-click="toggleMenu()" ui-sref="app.profile">My profile</div>-->
+                <div class="btn-base-green btn-login" ng-click="toggleMenu()" ui-sref="sign-in">Sign in</div>
+            </li>
+
+        </ul>
+    </header>
+    <div class="visible-mobile menu-backdrop" ng-click="toggleMenu()"></div>
+    <section ui-view class="app-layout" autoscroll="true"></section>
+    <footer class="container">
+        <ul class="site-map">
+            <li class="site-map-item form-container">
+                <form class="subscribe-form">
+                    <h5 class="subscribe-form-head">Are you with us?</h5>
+                    <input type="email" class="form-input-subscribe" placeholder="Sign up for emails">
+                    <button type="submit" class="btn-base-green btn-subscribe-submit">Subscribe</button>
+                </form>
+            </li>
+            <li class="site-map-item link-container">
+                <span class="map-link">Faq</span>
+                <span class="map-link">Contact us</span>
+                <span class="map-link" ui-sref="app.cv({cvOwner:'partner'})" ui-sref-active="active">Become a talent partner</span>
+                <span class="map-link">Terms of use</span>
+                <span class="map-link">Privacy policy</span>
+            </li>
+            <li class="site-map-item link-container">
+                <span class="map-link" ui-sref="app.hire" ui-sref-active="active">Hire a human</span>
+                <span class="map-link" ui-sref="app.about-us" ui-sref-active="active">About us</span>
+                <span class="map-link" ui-sref="app.our-process" ui-sref-active="active">Our process</span>
+                <span class="map-link" ui-sref="app.our-fees" ui-sref-active="active">Our fees</span>
+                <span class="map-link" ui-sref="app.candidates" ui-sref-active="active">Candidates</span>
+            </li>
+        </ul>
+    </footer>
+</div>

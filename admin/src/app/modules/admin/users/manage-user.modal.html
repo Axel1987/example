@@ -1,0 +1,48 @@
+<div class="modal-content">
+    <div class="modal-header">
+        <h3 class="modal-title" id="modal-title">{{ user.id ? 'Edit user' : 'Create user' }}</h3>
+    </div>
+    <div class="modal-body" id="modal-body">
+
+        <div class="form-group">
+            <label for="name">User's name</label>
+            <input id="name" class="form-control" type="text" placeholder="Name" ng-model="user.name">
+            <span class="text-danger" ng-show="errorMessage.name[0]">{{ errorMessage.name[0] }}</span>
+        </div>
+
+        <div class="form-group">
+            <label for="email">User's email</label>
+            <input id="email" class="form-control" type="email" placeholder="Email" ng-model="user.email">
+            <span class="text-danger" ng-show="errorMessage.email[0]">{{ errorMessage.email[0] }}</span>
+        </div>
+
+        <div class="form-group">
+            <label for="phone">User's phone</label>
+            <input id="phone" class="form-control" type="tel" placeholder="Phone" ng-model="user.phone">
+            <span class="text-danger" ng-show="errorMessage.phone[0]">{{ errorMessage.phone[0] }}</span>
+        </div>
+
+        <div class="form-group">
+            <label for="role">User's role</label>
+            <select id="role" class="form-control" ng-model="user.user_role.role_id"
+                    ng-options="role.id as role.display_name for role in roles">
+            </select>
+            <span class="text-danger" ng-show="errorMessage.phone[0]">{{ errorMessage.phone[0] }}</span>
+        </div>
+
+        <div class="form-group" ng-if="!user.id">
+            <input-password model="user.password" label="'Password'"></input-password>
+            <span class="text-danger" ng-show="errorMessage.password[0]">{{ errorMessage.password[0] }}</span>
+        </div>
+
+        <div class="form-group" ng-if="!user.id">
+            <input-password model="user.password_confirmation" label="'Confirm password'"></input-password>
+            <span class="text-danger" ng-show="errorMessage.password_confirmation[0]">{{ errorMessage.password_confirmation[0] }}</span>
+        </div>
+
+    </div>
+    <div class="modal-footer">
+        <button class="btn btn-primary" type="button" ng-click="submit()">OK</button>
+        <button class="btn btn-warning" type="button" ng-click="cancel()">Cancel</button>
+    </div>
+</div>

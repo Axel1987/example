@@ -1,0 +1,51 @@
+{
+  "name": "talent",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "webpack-build": "webpack -p --env.NODE_ENV=production --config webpack.config.js",
+    "webpack-dev": "webpack --env.NODE_ENV=development --config webpack.config.js --watch",
+    "clean-cordova": "sh -c 'rm -rf ./cordova/www'",
+    "clean-cordova-plugins": "sh -c 'rm -rf ./cordova/plugins'",
+    "clean-cordova-internal-plugins": "cd cordova && cordova platform remove android && cordova platform add android@6.0.0",
+    "add-cordova-plugins": "sh -c 'mkdir -pv cordova/plugins/'",
+    "install-cordova": "sh -c 'mkdir -pv cordova/www/; cp -r dist/* cordova/www'",
+    "build-cordova-android": "npm run clean-cordova-internal-plugins && npm run clean-cordova && npm run webpack-build && npm run install-cordova",
+    "cordova-android": "npm run build-cordova-android && cd cordova && cordova platform update android@6.0.0 && cordova build android"
+  },
+  "author": "2dmaster",
+  "license": "MIT",
+  "devDependencies": {
+    "autoprefixer": "^7.2.1",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.1",
+    "css-loader": "^0.28.7",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "file-loader": "^1.1.5",
+    "html-loader": "^0.5.1",
+    "img-loader": "^2.0.0",
+    "node-sass": "^4.7.2",
+    "postcss-loader": "^2.0.9",
+    "sass-loader": "^6.0.6",
+    "style-loader": "^0.19.0",
+    "url-loader": "^0.6.2",
+    "webpack": "3.9.1"
+  },
+  "dependencies": {
+    "@uirouter/angularjs": "^1.0.11",
+    "angular": "^1.6.8",
+    "angular-animate": "^1.6.8",
+    "angular-carousel": "^1.1.0",
+    "angular-deferred-bootstrap": "^0.1.9",
+    "angular-local-storage": "^0.7.1",
+    "angular-touch": "^1.6.8",
+    "bootstrap": "^4.0.0-beta.2",
+    "ng-file-upload": "^12.2.13"
+  },
+  "cordova": {
+    "platforms": [
+      "android"
+    ]
+  }
+}

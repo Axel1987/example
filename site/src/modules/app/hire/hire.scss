@@ -1,0 +1,11 @@
+
+.hire-from-container{
+  padding-top: 2vh;
+  padding-bottom: 2vh;
+}
+
+@media (min-width: 1500px) {
+  .hire-from-container{
+    max-width: 1000px;
+  }
+}

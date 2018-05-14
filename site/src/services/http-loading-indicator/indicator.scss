@@ -1,0 +1,55 @@
+.http-indicator{
+  position: fixed;
+  z-index: 99999;
+  background-color: rgba(0,0,0,.15);
+  left:0;
+  right: 0;
+  top:0;
+  bottom: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  .spinner{
+    svg{
+      width: 60px;
+      height: 60px;
+      path{
+        animation-name: fade;
+        animation-duration: .8s;
+        animation-iteration-count: infinite;
+      }
+    }
+  }
+  &.active{
+    display: flex;
+  }
+}
+
+.frame0{
+  animation-delay: -.8s;
+}
+.frame1{
+  animation-delay: -.7s;
+}
+.frame2{
+  animation-delay: -.6s;
+}
+.frame3{
+  animation-delay: -.5s;
+}
+.frame4{
+  animation-delay: -.4s;
+}
+.frame5{
+  animation-delay: -.3s;
+}
+.frame6{
+  animation-delay: -.2s;
+}
+.frame7{
+  animation-delay: -.1s;
+}
+@keyframes fade {
+  0%, 39%, 100% { opacity: 0; }
+  40% { opacity: 1; }
+}

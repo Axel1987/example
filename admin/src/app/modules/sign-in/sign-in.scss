@@ -1,0 +1,33 @@
+.sign-in{
+  width: 500px;
+  padding: 8% 0 0;
+  margin: auto;
+}
+
+.sign-in h2{
+  margin-bottom: 25px;
+}
+
+.login-form{
+  text-align: center;
+  padding: 15px;
+  box-shadow: 5px 5px rgba(85, 85, 85, 0.27);
+  border: 1px solid rgba(85, 85, 85, 0.27);
+  background: #fff;
+}
+
+.sign-in button{
+  background: #386f59;
+  width: 100%;
+  padding: 10px;
+  border: 0;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.sign-in span {
+  padding: 10px;
+  display: block;
+  font-weight: bold;
+}

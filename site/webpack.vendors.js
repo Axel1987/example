@@ -1,0 +1,10 @@
+import angular from 'angular';
+import uiRouter from '@uirouter/angularjs';
+import ngStorage from 'angular-local-storage';
+import ngTouch from 'angular-touch';
+import ngAnimate from 'angular-animate';
+import ngFileUpload from 'ng-file-upload';
+require ('./node_modules/bootstrap/dist/css/bootstrap-grid.css');
+require ('./node_modules/angular-carousel/dist/angular-carousel');
+require ('./node_modules/angular-carousel/dist/angular-carousel.css');
+window.deferredBootstrapper = require ('./node_modules/angular-deferred-bootstrap/angular-deferred-bootstrap');
